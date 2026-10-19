@@ -1,0 +1,25 @@
+[project]
+name = "web-scraping-pipeline"
+version = "1.0.0"
+description = "Pipeline de web scraping com Scrapy, Selenium, BeautifulSoup, Pandas e Matplotlib."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Marcielle Santos", email = "marcielle.san@gmail.com" }]
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["tests/fixtures"]
+
+[tool.ruff.lint]
+# E/W: pycodestyle | F: pyflakes | I: isort | B: bugbear | UP: pyupgrade
+# SIM: simplificações | C4: comprehensions | PT: boas práticas de pytest
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "C4", "PT"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pipeline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

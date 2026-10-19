@@ -1,0 +1,31 @@
+# Ambiente virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Ferramentas
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Dados e relatórios gerados pelo pipeline (os gráficos de exemplo ficam em docs/)
+data/*
+!data/.gitkeep
+reports/*
+!reports/.gitkeep
+*.log
+.scrapy/
+
+# IDEs / sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
